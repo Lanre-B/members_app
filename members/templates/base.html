@@ -1,11 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<h1>{{ page_header }} Page</h1>
+<div class="topnav">
+    <a href="/">HOME</a> |
+    <a href="/members">MEMBERS</a>
+</div>
 {% block content %}{% endblock %}
 </body>
 </html>
